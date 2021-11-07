@@ -1,27 +1,28 @@
-$num-columns : 8;
-$one-column : 100% / $num_columns;
-$loop-start: 1;
-$loop-end: $num-columns +1;
-
-@mixin col($span-num) {
-    flex: 0 0 $one-column * $span-num;
+.row .cell:nth-of-type(3) {
+    grid-column: 4;
 }
 
-@mixin offset($offset-num) {
-    margin-left: $one-column * $offset-num;
+.row .cell:nth-of-type(4) {
+    grid-column: 3;
 }
 
-
-//make column classes 
-@for $index from $loop-start to $loop-end {
-    .col-#{$index} {
-        @include col($index);
-    }
+.row .cell:nth-of-type(5) {
+    grid-column: 2;
 }
 
-//make offset classes
-@for $index from $loop-start to $loop-end {
-    .offset-#{$index} {
-        @include offset($index);
-    }
+.row .cell:nth-of-type(6) {
+    grid-column: 4;
+}
+
+.row .cell:nth-of-type(7) {
+    grid-column: 2;
+}
+
+.row .cell:nth-of-type(8) {
+    grid-column: 4;
+}
+
+.row .cell:nth-of-type(9) {
+    grid-column: 5;
+    grid-row: 4;
 }
